@@ -1,0 +1,933 @@
+{
+  "generatedAt": "2026-03-12",
+  "range": {
+    "start": "2026-02-11",
+    "end": "2026-03-12"
+  },
+  "assistants": [
+    {
+      "id": "finpulse",
+      "name": "FinPulse",
+      "description": "Финансовый ассистент для мониторинга личного бюджета и быстрых ответов по расходам и целям.",
+      "pattern": "stable_growth",
+      "rows": [
+        {
+          "date": "2026-02-11",
+          "dateLabel": "11.02",
+          "dateLabelFull": "11.02.26",
+          "requests": 1160,
+          "uniqueUsers": 315,
+          "chatsCreated": 184,
+          "avgRequestsPerChat": 6.3,
+          "favorites": 32
+        },
+        {
+          "date": "2026-02-12",
+          "dateLabel": "12.02",
+          "dateLabelFull": "12.02.26",
+          "requests": 1280,
+          "uniqueUsers": 358,
+          "chatsCreated": 215,
+          "avgRequestsPerChat": 5.95,
+          "favorites": 40
+        },
+        {
+          "date": "2026-02-13",
+          "dateLabel": "13.02",
+          "dateLabelFull": "13.02.26",
+          "requests": 1400,
+          "uniqueUsers": 402,
+          "chatsCreated": 246,
+          "avgRequestsPerChat": 5.69,
+          "favorites": 48
+        },
+        {
+          "date": "2026-02-14",
+          "dateLabel": "14.02",
+          "dateLabelFull": "14.02.26",
+          "requests": 1520,
+          "uniqueUsers": 416,
+          "chatsCreated": 260,
+          "avgRequestsPerChat": 5.85,
+          "favorites": 53
+        },
+        {
+          "date": "2026-02-15",
+          "dateLabel": "15.02",
+          "dateLabelFull": "15.02.26",
+          "requests": 1640,
+          "uniqueUsers": 459,
+          "chatsCreated": 270,
+          "avgRequestsPerChat": 6.07,
+          "favorites": 61
+        },
+        {
+          "date": "2026-02-16",
+          "dateLabel": "16.02",
+          "dateLabelFull": "16.02.26",
+          "requests": 1660,
+          "uniqueUsers": 475,
+          "chatsCreated": 285,
+          "avgRequestsPerChat": 5.82,
+          "favorites": 66
+        },
+        {
+          "date": "2026-02-17",
+          "dateLabel": "17.02",
+          "dateLabelFull": "17.02.26",
+          "requests": 1780,
+          "uniqueUsers": 488,
+          "chatsCreated": 298,
+          "avgRequestsPerChat": 5.97,
+          "favorites": 53
+        },
+        {
+          "date": "2026-02-18",
+          "dateLabel": "18.02",
+          "dateLabelFull": "18.02.26",
+          "requests": 1900,
+          "uniqueUsers": 532,
+          "chatsCreated": 329,
+          "avgRequestsPerChat": 5.78,
+          "favorites": 61
+        },
+        {
+          "date": "2026-02-19",
+          "dateLabel": "19.02",
+          "dateLabelFull": "19.02.26",
+          "requests": 2020,
+          "uniqueUsers": 576,
+          "chatsCreated": 341,
+          "avgRequestsPerChat": 5.92,
+          "favorites": 69
+        },
+        {
+          "date": "2026-02-20",
+          "dateLabel": "20.02",
+          "dateLabelFull": "20.02.26",
+          "requests": 2140,
+          "uniqueUsers": 589,
+          "chatsCreated": 353,
+          "avgRequestsPerChat": 6.06,
+          "favorites": 74
+        },
+        {
+          "date": "2026-02-21",
+          "dateLabel": "21.02",
+          "dateLabelFull": "21.02.26",
+          "requests": 2160,
+          "uniqueUsers": 605,
+          "chatsCreated": 368,
+          "avgRequestsPerChat": 5.87,
+          "favorites": 79
+        },
+        {
+          "date": "2026-02-22",
+          "dateLabel": "22.02",
+          "dateLabelFull": "22.02.26",
+          "requests": 2280,
+          "uniqueUsers": 648,
+          "chatsCreated": 399,
+          "avgRequestsPerChat": 5.71,
+          "favorites": 87
+        },
+        {
+          "date": "2026-02-23",
+          "dateLabel": "23.02",
+          "dateLabelFull": "23.02.26",
+          "requests": 2400,
+          "uniqueUsers": 662,
+          "chatsCreated": 392,
+          "avgRequestsPerChat": 6.12,
+          "favorites": 73
+        },
+        {
+          "date": "2026-02-24",
+          "dateLabel": "24.02",
+          "dateLabelFull": "24.02.26",
+          "requests": 2520,
+          "uniqueUsers": 706,
+          "chatsCreated": 424,
+          "avgRequestsPerChat": 5.94,
+          "favorites": 82
+        },
+        {
+          "date": "2026-02-25",
+          "dateLabel": "25.02",
+          "dateLabelFull": "25.02.26",
+          "requests": 2640,
+          "uniqueUsers": 749,
+          "chatsCreated": 454,
+          "avgRequestsPerChat": 5.81,
+          "favorites": 90
+        },
+        {
+          "date": "2026-02-26",
+          "dateLabel": "26.02",
+          "dateLabelFull": "26.02.26",
+          "requests": 2660,
+          "uniqueUsers": 735,
+          "chatsCreated": 451,
+          "avgRequestsPerChat": 5.9,
+          "favorites": 91
+        },
+        {
+          "date": "2026-02-27",
+          "dateLabel": "27.02",
+          "dateLabelFull": "27.02.26",
+          "requests": 2780,
+          "uniqueUsers": 778,
+          "chatsCreated": 462,
+          "avgRequestsPerChat": 6.02,
+          "favorites": 99
+        },
+        {
+          "date": "2026-02-28",
+          "dateLabel": "28.02",
+          "dateLabelFull": "28.02.26",
+          "requests": 2900,
+          "uniqueUsers": 822,
+          "chatsCreated": 493,
+          "avgRequestsPerChat": 5.88,
+          "favorites": 108
+        },
+        {
+          "date": "2026-03-01",
+          "dateLabel": "01.03",
+          "dateLabelFull": "01.03.26",
+          "requests": 3020,
+          "uniqueUsers": 836,
+          "chatsCreated": 507,
+          "avgRequestsPerChat": 5.96,
+          "favorites": 94
+        },
+        {
+          "date": "2026-03-02",
+          "dateLabel": "02.03",
+          "dateLabelFull": "02.03.26",
+          "requests": 3140,
+          "uniqueUsers": 879,
+          "chatsCreated": 537,
+          "avgRequestsPerChat": 5.85,
+          "favorites": 102
+        },
+        {
+          "date": "2026-03-03",
+          "dateLabel": "03.03",
+          "dateLabelFull": "03.03.26",
+          "requests": 3160,
+          "uniqueUsers": 895,
+          "chatsCreated": 532,
+          "avgRequestsPerChat": 5.94,
+          "favorites": 107
+        },
+        {
+          "date": "2026-03-04",
+          "dateLabel": "04.03",
+          "dateLabelFull": "04.03.26",
+          "requests": 3280,
+          "uniqueUsers": 908,
+          "chatsCreated": 545,
+          "avgRequestsPerChat": 6.02,
+          "favorites": 112
+        },
+        {
+          "date": "2026-03-05",
+          "dateLabel": "05.03",
+          "dateLabelFull": "05.03.26",
+          "requests": 3400,
+          "uniqueUsers": 952,
+          "chatsCreated": 576,
+          "avgRequestsPerChat": 5.9,
+          "favorites": 120
+        },
+        {
+          "date": "2026-03-06",
+          "dateLabel": "06.03",
+          "dateLabelFull": "06.03.26",
+          "requests": 3520,
+          "uniqueUsers": 996,
+          "chatsCreated": 608,
+          "avgRequestsPerChat": 5.79,
+          "favorites": 129
+        },
+        {
+          "date": "2026-03-07",
+          "dateLabel": "07.03",
+          "dateLabelFull": "07.03.26",
+          "requests": 3640,
+          "uniqueUsers": 1009,
+          "chatsCreated": 600,
+          "avgRequestsPerChat": 6.07,
+          "favorites": 115
+        },
+        {
+          "date": "2026-03-08",
+          "dateLabel": "08.03",
+          "dateLabelFull": "08.03.26",
+          "requests": 3660,
+          "uniqueUsers": 1025,
+          "chatsCreated": 615,
+          "avgRequestsPerChat": 5.95,
+          "favorites": 120
+        },
+        {
+          "date": "2026-03-09",
+          "dateLabel": "09.03",
+          "dateLabelFull": "09.03.26",
+          "requests": 3780,
+          "uniqueUsers": 1068,
+          "chatsCreated": 646,
+          "avgRequestsPerChat": 5.85,
+          "favorites": 128
+        },
+        {
+          "date": "2026-03-10",
+          "dateLabel": "10.03",
+          "dateLabelFull": "10.03.26",
+          "requests": 3900,
+          "uniqueUsers": 1082,
+          "chatsCreated": 659,
+          "avgRequestsPerChat": 5.92,
+          "favorites": 133
+        },
+        {
+          "date": "2026-03-11",
+          "dateLabel": "11.03",
+          "dateLabelFull": "11.03.26",
+          "requests": 4020,
+          "uniqueUsers": 1126,
+          "chatsCreated": 671,
+          "avgRequestsPerChat": 5.99,
+          "favorites": 141
+        },
+        {
+          "date": "2026-03-12",
+          "dateLabel": "12.03",
+          "dateLabelFull": "12.03.26",
+          "requests": 4140,
+          "uniqueUsers": 1169,
+          "chatsCreated": 701,
+          "avgRequestsPerChat": 5.91,
+          "favorites": 149
+        }
+      ]
+    },
+    {
+      "id": "lingualift",
+      "name": "LinguaLift",
+      "description": "Ассистент для изучения языков с микро-диалогами и персональными тренировками.",
+      "pattern": "spikes",
+      "rows": [
+        {
+          "date": "2026-02-11",
+          "dateLabel": "11.02",
+          "dateLabelFull": "11.02.26",
+          "requests": 180,
+          "uniqueUsers": 75,
+          "chatsCreated": 40,
+          "avgRequestsPerChat": 4.5,
+          "favorites": 10
+        },
+        {
+          "date": "2026-02-12",
+          "dateLabel": "12.02",
+          "dateLabelFull": "12.02.26",
+          "requests": 195,
+          "uniqueUsers": 96,
+          "chatsCreated": 53,
+          "avgRequestsPerChat": 3.68,
+          "favorites": 15
+        },
+        {
+          "date": "2026-02-13",
+          "dateLabel": "13.02",
+          "dateLabelFull": "13.02.26",
+          "requests": 210,
+          "uniqueUsers": 89,
+          "chatsCreated": 51,
+          "avgRequestsPerChat": 4.12,
+          "favorites": 16
+        },
+        {
+          "date": "2026-02-14",
+          "dateLabel": "14.02",
+          "dateLabelFull": "14.02.26",
+          "requests": 225,
+          "uniqueUsers": 109,
+          "chatsCreated": 58,
+          "avgRequestsPerChat": 3.88,
+          "favorites": 22
+        },
+        {
+          "date": "2026-02-15",
+          "dateLabel": "15.02",
+          "dateLabelFull": "15.02.26",
+          "requests": 1260,
+          "uniqueUsers": 561,
+          "chatsCreated": 309,
+          "avgRequestsPerChat": 4.08,
+          "favorites": 97
+        },
+        {
+          "date": "2026-02-16",
+          "dateLabel": "16.02",
+          "dateLabelFull": "16.02.26",
+          "requests": 255,
+          "uniqueUsers": 123,
+          "chatsCreated": 70,
+          "avgRequestsPerChat": 3.64,
+          "favorites": 20
+        },
+        {
+          "date": "2026-02-17",
+          "dateLabel": "17.02",
+          "dateLabelFull": "17.02.26",
+          "requests": 270,
+          "uniqueUsers": 116,
+          "chatsCreated": 62,
+          "avgRequestsPerChat": 4.35,
+          "favorites": 21
+        },
+        {
+          "date": "2026-02-18",
+          "dateLabel": "18.02",
+          "dateLabelFull": "18.02.26",
+          "requests": 180,
+          "uniqueUsers": 89,
+          "chatsCreated": 49,
+          "avgRequestsPerChat": 3.67,
+          "favorites": 18
+        },
+        {
+          "date": "2026-02-19",
+          "dateLabel": "19.02",
+          "dateLabelFull": "19.02.26",
+          "requests": 195,
+          "uniqueUsers": 82,
+          "chatsCreated": 47,
+          "avgRequestsPerChat": 4.15,
+          "favorites": 11
+        },
+        {
+          "date": "2026-02-20",
+          "dateLabel": "20.02",
+          "dateLabelFull": "20.02.26",
+          "requests": 210,
+          "uniqueUsers": 103,
+          "chatsCreated": 55,
+          "avgRequestsPerChat": 3.82,
+          "favorites": 17
+        },
+        {
+          "date": "2026-02-21",
+          "dateLabel": "21.02",
+          "dateLabelFull": "21.02.26",
+          "requests": 225,
+          "uniqueUsers": 95,
+          "chatsCreated": 52,
+          "avgRequestsPerChat": 4.33,
+          "favorites": 17
+        },
+        {
+          "date": "2026-02-22",
+          "dateLabel": "22.02",
+          "dateLabelFull": "22.02.26",
+          "requests": 1380,
+          "uniqueUsers": 629,
+          "chatsCreated": 348,
+          "avgRequestsPerChat": 3.97,
+          "favorites": 115
+        },
+        {
+          "date": "2026-02-23",
+          "dateLabel": "23.02",
+          "dateLabelFull": "23.02.26",
+          "requests": 255,
+          "uniqueUsers": 109,
+          "chatsCreated": 58,
+          "avgRequestsPerChat": 4.4,
+          "favorites": 16
+        },
+        {
+          "date": "2026-02-24",
+          "dateLabel": "24.02",
+          "dateLabelFull": "24.02.26",
+          "requests": 270,
+          "uniqueUsers": 130,
+          "chatsCreated": 72,
+          "avgRequestsPerChat": 3.75,
+          "favorites": 21
+        },
+        {
+          "date": "2026-02-25",
+          "dateLabel": "25.02",
+          "dateLabelFull": "25.02.26",
+          "requests": 180,
+          "uniqueUsers": 75,
+          "chatsCreated": 43,
+          "avgRequestsPerChat": 4.19,
+          "favorites": 14
+        },
+        {
+          "date": "2026-02-26",
+          "dateLabel": "26.02",
+          "dateLabelFull": "26.02.26",
+          "requests": 195,
+          "uniqueUsers": 96,
+          "chatsCreated": 51,
+          "avgRequestsPerChat": 3.82,
+          "favorites": 19
+        },
+        {
+          "date": "2026-02-27",
+          "dateLabel": "27.02",
+          "dateLabelFull": "27.02.26",
+          "requests": 210,
+          "uniqueUsers": 89,
+          "chatsCreated": 49,
+          "avgRequestsPerChat": 4.29,
+          "favorites": 12
+        },
+        {
+          "date": "2026-02-28",
+          "dateLabel": "28.02",
+          "dateLabelFull": "28.02.26",
+          "requests": 225,
+          "uniqueUsers": 109,
+          "chatsCreated": 62,
+          "avgRequestsPerChat": 3.63,
+          "favorites": 18
+        },
+        {
+          "date": "2026-03-01",
+          "dateLabel": "01.03",
+          "dateLabelFull": "01.03.26",
+          "requests": 1140,
+          "uniqueUsers": 507,
+          "chatsCreated": 277,
+          "avgRequestsPerChat": 4.12,
+          "favorites": 91
+        },
+        {
+          "date": "2026-03-02",
+          "dateLabel": "02.03",
+          "dateLabelFull": "02.03.26",
+          "requests": 255,
+          "uniqueUsers": 123,
+          "chatsCreated": 68,
+          "avgRequestsPerChat": 3.75,
+          "favorites": 24
+        },
+        {
+          "date": "2026-03-03",
+          "dateLabel": "03.03",
+          "dateLabelFull": "03.03.26",
+          "requests": 270,
+          "uniqueUsers": 116,
+          "chatsCreated": 66,
+          "avgRequestsPerChat": 4.09,
+          "favorites": 17
+        },
+        {
+          "date": "2026-03-04",
+          "dateLabel": "04.03",
+          "dateLabelFull": "04.03.26",
+          "requests": 180,
+          "uniqueUsers": 89,
+          "chatsCreated": 47,
+          "avgRequestsPerChat": 3.83,
+          "favorites": 14
+        },
+        {
+          "date": "2026-03-05",
+          "dateLabel": "05.03",
+          "dateLabelFull": "05.03.26",
+          "requests": 195,
+          "uniqueUsers": 82,
+          "chatsCreated": 45,
+          "avgRequestsPerChat": 4.33,
+          "favorites": 15
+        },
+        {
+          "date": "2026-03-06",
+          "dateLabel": "06.03",
+          "dateLabelFull": "06.03.26",
+          "requests": 210,
+          "uniqueUsers": 103,
+          "chatsCreated": 59,
+          "avgRequestsPerChat": 3.56,
+          "favorites": 21
+        },
+        {
+          "date": "2026-03-07",
+          "dateLabel": "07.03",
+          "dateLabelFull": "07.03.26",
+          "requests": 225,
+          "uniqueUsers": 95,
+          "chatsCreated": 50,
+          "avgRequestsPerChat": 4.5,
+          "favorites": 13
+        },
+        {
+          "date": "2026-03-08",
+          "dateLabel": "08.03",
+          "dateLabelFull": "08.03.26",
+          "requests": 1260,
+          "uniqueUsers": 575,
+          "chatsCreated": 316,
+          "avgRequestsPerChat": 3.99,
+          "favorites": 102
+        },
+        {
+          "date": "2026-03-09",
+          "dateLabel": "09.03",
+          "dateLabelFull": "09.03.26",
+          "requests": 255,
+          "uniqueUsers": 109,
+          "chatsCreated": 62,
+          "avgRequestsPerChat": 4.11,
+          "favorites": 20
+        },
+        {
+          "date": "2026-03-10",
+          "dateLabel": "10.03",
+          "dateLabelFull": "10.03.26",
+          "requests": 270,
+          "uniqueUsers": 130,
+          "chatsCreated": 70,
+          "avgRequestsPerChat": 3.86,
+          "favorites": 25
+        },
+        {
+          "date": "2026-03-11",
+          "dateLabel": "11.03",
+          "dateLabelFull": "11.03.26",
+          "requests": 180,
+          "uniqueUsers": 75,
+          "chatsCreated": 41,
+          "avgRequestsPerChat": 4.39,
+          "favorites": 10
+        },
+        {
+          "date": "2026-03-12",
+          "dateLabel": "12.03",
+          "dateLabelFull": "12.03.26",
+          "requests": 195,
+          "uniqueUsers": 96,
+          "chatsCreated": 55,
+          "avgRequestsPerChat": 3.55,
+          "favorites": 15
+        }
+      ]
+    },
+    {
+      "id": "weekendvibe",
+      "name": "WeekendVibe",
+      "description": "Развлекательный ассистент для быстрых идей на выходные и лёгких сценариев отдыха.",
+      "pattern": "seasonal",
+      "rows": [
+        {
+          "date": "2026-02-11",
+          "dateLabel": "11.02",
+          "dateLabelFull": "11.02.26",
+          "requests": 55,
+          "uniqueUsers": 33,
+          "chatsCreated": 25,
+          "avgRequestsPerChat": 2.2,
+          "favorites": 6
+        },
+        {
+          "date": "2026-02-12",
+          "dateLabel": "12.02",
+          "dateLabelFull": "12.02.26",
+          "requests": 61,
+          "uniqueUsers": 37,
+          "chatsCreated": 28,
+          "avgRequestsPerChat": 2.18,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-13",
+          "dateLabel": "13.02",
+          "dateLabelFull": "13.02.26",
+          "requests": 67,
+          "uniqueUsers": 40,
+          "chatsCreated": 30,
+          "avgRequestsPerChat": 2.23,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-14",
+          "dateLabel": "14.02",
+          "dateLabelFull": "14.02.26",
+          "requests": 24,
+          "uniqueUsers": 11,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3,
+          "favorites": 2
+        },
+        {
+          "date": "2026-02-15",
+          "dateLabel": "15.02",
+          "dateLabelFull": "15.02.26",
+          "requests": 28,
+          "uniqueUsers": 13,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3.5,
+          "favorites": 2
+        },
+        {
+          "date": "2026-02-16",
+          "dateLabel": "16.02",
+          "dateLabelFull": "16.02.26",
+          "requests": 55,
+          "uniqueUsers": 33,
+          "chatsCreated": 25,
+          "avgRequestsPerChat": 2.2,
+          "favorites": 6
+        },
+        {
+          "date": "2026-02-17",
+          "dateLabel": "17.02",
+          "dateLabelFull": "17.02.26",
+          "requests": 61,
+          "uniqueUsers": 37,
+          "chatsCreated": 28,
+          "avgRequestsPerChat": 2.18,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-18",
+          "dateLabel": "18.02",
+          "dateLabelFull": "18.02.26",
+          "requests": 67,
+          "uniqueUsers": 40,
+          "chatsCreated": 30,
+          "avgRequestsPerChat": 2.23,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-19",
+          "dateLabel": "19.02",
+          "dateLabelFull": "19.02.26",
+          "requests": 73,
+          "uniqueUsers": 43,
+          "chatsCreated": 32,
+          "avgRequestsPerChat": 2.28,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-20",
+          "dateLabel": "20.02",
+          "dateLabelFull": "20.02.26",
+          "requests": 79,
+          "uniqueUsers": 46,
+          "chatsCreated": 34,
+          "avgRequestsPerChat": 2.32,
+          "favorites": 8
+        },
+        {
+          "date": "2026-02-21",
+          "dateLabel": "21.02",
+          "dateLabelFull": "21.02.26",
+          "requests": 28,
+          "uniqueUsers": 13,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3.5,
+          "favorites": 2
+        },
+        {
+          "date": "2026-02-22",
+          "dateLabel": "22.02",
+          "dateLabelFull": "22.02.26",
+          "requests": 32,
+          "uniqueUsers": 16,
+          "chatsCreated": 10,
+          "avgRequestsPerChat": 3.2,
+          "favorites": 2
+        },
+        {
+          "date": "2026-02-23",
+          "dateLabel": "23.02",
+          "dateLabelFull": "23.02.26",
+          "requests": 67,
+          "uniqueUsers": 40,
+          "chatsCreated": 30,
+          "avgRequestsPerChat": 2.23,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-24",
+          "dateLabel": "24.02",
+          "dateLabelFull": "24.02.26",
+          "requests": 73,
+          "uniqueUsers": 43,
+          "chatsCreated": 32,
+          "avgRequestsPerChat": 2.28,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-25",
+          "dateLabel": "25.02",
+          "dateLabelFull": "25.02.26",
+          "requests": 79,
+          "uniqueUsers": 46,
+          "chatsCreated": 34,
+          "avgRequestsPerChat": 2.32,
+          "favorites": 8
+        },
+        {
+          "date": "2026-02-26",
+          "dateLabel": "26.02",
+          "dateLabelFull": "26.02.26",
+          "requests": 55,
+          "uniqueUsers": 33,
+          "chatsCreated": 25,
+          "avgRequestsPerChat": 2.2,
+          "favorites": 6
+        },
+        {
+          "date": "2026-02-27",
+          "dateLabel": "27.02",
+          "dateLabelFull": "27.02.26",
+          "requests": 61,
+          "uniqueUsers": 37,
+          "chatsCreated": 28,
+          "avgRequestsPerChat": 2.18,
+          "favorites": 7
+        },
+        {
+          "date": "2026-02-28",
+          "dateLabel": "28.02",
+          "dateLabelFull": "28.02.26",
+          "requests": 32,
+          "uniqueUsers": 16,
+          "chatsCreated": 10,
+          "avgRequestsPerChat": 3.2,
+          "favorites": 2
+        },
+        {
+          "date": "2026-03-01",
+          "dateLabel": "01.03",
+          "dateLabelFull": "01.03.26",
+          "requests": 24,
+          "uniqueUsers": 11,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3,
+          "favorites": 2
+        },
+        {
+          "date": "2026-03-02",
+          "dateLabel": "02.03",
+          "dateLabelFull": "02.03.26",
+          "requests": 79,
+          "uniqueUsers": 46,
+          "chatsCreated": 34,
+          "avgRequestsPerChat": 2.32,
+          "favorites": 8
+        },
+        {
+          "date": "2026-03-03",
+          "dateLabel": "03.03",
+          "dateLabelFull": "03.03.26",
+          "requests": 55,
+          "uniqueUsers": 33,
+          "chatsCreated": 25,
+          "avgRequestsPerChat": 2.2,
+          "favorites": 6
+        },
+        {
+          "date": "2026-03-04",
+          "dateLabel": "04.03",
+          "dateLabelFull": "04.03.26",
+          "requests": 61,
+          "uniqueUsers": 37,
+          "chatsCreated": 28,
+          "avgRequestsPerChat": 2.18,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-05",
+          "dateLabel": "05.03",
+          "dateLabelFull": "05.03.26",
+          "requests": 67,
+          "uniqueUsers": 40,
+          "chatsCreated": 30,
+          "avgRequestsPerChat": 2.23,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-06",
+          "dateLabel": "06.03",
+          "dateLabelFull": "06.03.26",
+          "requests": 73,
+          "uniqueUsers": 43,
+          "chatsCreated": 32,
+          "avgRequestsPerChat": 2.28,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-07",
+          "dateLabel": "07.03",
+          "dateLabelFull": "07.03.26",
+          "requests": 24,
+          "uniqueUsers": 11,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3,
+          "favorites": 2
+        },
+        {
+          "date": "2026-03-08",
+          "dateLabel": "08.03",
+          "dateLabelFull": "08.03.26",
+          "requests": 28,
+          "uniqueUsers": 13,
+          "chatsCreated": 8,
+          "avgRequestsPerChat": 3.5,
+          "favorites": 2
+        },
+        {
+          "date": "2026-03-09",
+          "dateLabel": "09.03",
+          "dateLabelFull": "09.03.26",
+          "requests": 61,
+          "uniqueUsers": 37,
+          "chatsCreated": 28,
+          "avgRequestsPerChat": 2.18,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-10",
+          "dateLabel": "10.03",
+          "dateLabelFull": "10.03.26",
+          "requests": 67,
+          "uniqueUsers": 40,
+          "chatsCreated": 30,
+          "avgRequestsPerChat": 2.23,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-11",
+          "dateLabel": "11.03",
+          "dateLabelFull": "11.03.26",
+          "requests": 73,
+          "uniqueUsers": 43,
+          "chatsCreated": 32,
+          "avgRequestsPerChat": 2.28,
+          "favorites": 7
+        },
+        {
+          "date": "2026-03-12",
+          "dateLabel": "12.03",
+          "dateLabelFull": "12.03.26",
+          "requests": 79,
+          "uniqueUsers": 46,
+          "chatsCreated": 34,
+          "avgRequestsPerChat": 2.32,
+          "favorites": 8
+        }
+      ]
+    }
+  ]
+}

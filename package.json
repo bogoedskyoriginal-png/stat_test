@@ -1,0 +1,15 @@
+{
+  "name": "alfa-ai-stats-demo",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "node tools/dev-server.js",
+    "electron": "electron .",
+    "pack": "electron-packager . AlfaAIStats --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-packager": "^17.1.2"
+  }
+}

@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alfa AI — Статистика ассистентов</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Alfa AI · Демонстрация раздела «Статистика»</p>
+        <h1>Созданные мной ассистенты</h1>
+        <p class="subhead">Данные охватывают период с <span id="rangeStart">—</span> по <span id="rangeEnd">—</span>. Используйте меню карточки, чтобы открыть модальное окно статистики.</p>
+      </div>
+    </header>
+
+    <section class="cards" id="assistantCards"></section>
+
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">✕</button>
+      <header class="modal-header">
+        <div>
+          <p class="modal-eyebrow">Раздел «Статистика»</p>
+          <h3 id="modalTitle">—</h3>
+          <p class="modal-subtitle" id="modalSubtitle">—</p>
+        </div>
+        <div class="period-controls">
+          <button class="pill" data-period="30">Последние 30 дней</button>
+          <button class="pill" data-period="7">Последние 7 дней</button>
+          <button class="pill" data-period="custom">Выбрать период</button>
+        </div>
+        <div class="custom-range" id="customRange">
+          <label>
+            От
+            <input type="date" id="customStart" />
+          </label>
+          <label>
+            До
+            <input type="date" id="customEnd" />
+          </label>
+          <p class="hint" id="customHint">Максимальная длина периода — 30 дней.</p>
+        </div>
+      </header>
+
+      <div class="modal-body">
+        <div class="availability" id="availabilityNote">
+          <h4>Статистика станет доступной после 7 дней с момента публикации</h4>
+          <p id="availabilityDate">—</p>
+        </div>
+        <aside class="metrics" id="metricList"></aside>
+        <section class="chart-area">
+          <div class="chart-header">
+            <div>
+              <h4 id="metricTitle">—</h4>
+              <p id="metricDescription">—</p>
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="chart" width="840" height="360"></canvas>
+            <div class="tooltip" id="tooltip" aria-hidden="true"></div>
+          </div>
+          <div class="axis-note" id="axisNote">Адаптивные подписи осей подбираются автоматически.</div>
+          <div class="chart-footer">
+            <button class="download" id="downloadBtn">Скачать отчёт</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
