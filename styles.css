@@ -50,6 +50,66 @@ p {
   color: var(--muted);
 }
 
+.settings-bar {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.settings-title {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.date-controls {
+  display: grid;
+  gap: 12px;
+}
+
+.date-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.date-controls input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-family: 'Manrope', sans-serif;
+  background: #fff;
+}
+
+.creation-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.creation-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.creation-item strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -317,6 +377,67 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.chart-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.toggle-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--accent-dark);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.toggle-btn.active {
+  background: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 8px 18px rgba(71, 18, 16, 0.12);
+  transform: translateY(-1px);
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--accent-dark);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.toggle-btn.active .toggle-icon {
+  stroke: var(--accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .chart-footer {

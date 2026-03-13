@@ -36,7 +36,7 @@ const METRICS = [
 const assistants = DATA.assistants.map((assistant, index) => ({
   ...assistant,
   status: 'Публичный',
-  publishedAt: index === 0 ? '2025-12-14' : index === 1 ? '2026-01-03' : '2026-03-09',
+  creationDate: index === 0 ? '2025-12-14' : index === 1 ? '2026-01-03' : '2026-03-09',
 }));
 
 const state = {
@@ -46,11 +46,15 @@ const state = {
   customStart: null,
   customEnd: null,
   lastDownloadName: null,
+  chartType: 'line',
+  currentDate: DATA.range.end,
 };
 
 const cardContainer = document.getElementById('assistantCards');
 const rangeStart = document.getElementById('rangeStart');
 const rangeEnd = document.getElementById('rangeEnd');
+const currentDateInput = document.getElementById('currentDateInput');
+const creationList = document.getElementById('creationList');
 const modalBackdrop = document.getElementById('modalBackdrop');
 const modalTitle = document.getElementById('modalTitle');
 const modalSubtitle = document.getElementById('modalSubtitle');
@@ -67,6 +71,7 @@ const customHint = document.getElementById('customHint');
 const downloadBtn = document.getElementById('downloadBtn');
 const availabilityNote = document.getElementById('availabilityNote');
 const availabilityDate = document.getElementById('availabilityDate');
+const chartToggle = document.querySelector('.chart-toggle');
 
 let chartPoints = [];
 
@@ -112,12 +117,23 @@ function clampRange(start, end, minDate, maxDate) {
 
 function getRowsForPeriod() {
   const rows = state.assistant.rows;
-  const minDate = parseDate(rows[0].date);
-  const maxDate = parseDate(rows[rows.length - 1].date);
+  const dataMin = parseDate(rows[0].date);
+  const dataMax = parseDate(rows[rows.length - 1].date);
+  const creationDate = parseDate(state.assistant.creationDate);
+  const currentDate = parseDate(state.currentDate);
+  const minDate = creationDate > dataMin ? creationDate : dataMin;
+  const maxDate = currentDate < dataMax ? currentDate : dataMax;
+  const availableRows = rows.filter((row) => {
+    const date = parseDate(row.date);
+    return date >= minDate && date <= maxDate;
+  });
 
   if (state.periodType === '30' || state.periodType === '7') {
     const days = Number(state.periodType);
-    const slice = rows.slice(Math.max(rows.length - days, 0));
+    if (!availableRows.length) {
+      return { rows: [], start: minDate, end: maxDate, stepX: 1 };
+    }
+    const slice = availableRows.slice(Math.max(availableRows.length - days, 0));
     const start = parseDate(slice[0].date);
     const end = parseDate(slice[slice.length - 1].date);
     return {
@@ -143,7 +159,7 @@ function getRowsForPeriod() {
     }
 
     const clamped = clampRange(start, end, minDate, maxDate);
-    const filtered = rows.filter((row) => {
+    const filtered = availableRows.filter((row) => {
       const date = parseDate(row.date);
       return date >= clamped.start && date <= clamped.end;
     });
@@ -256,31 +272,44 @@ function drawChart(rows, metric, stepX) {
     ctx.fillText(value.toString(), 6 * dpr, y + 4 * dpr);
   }
 
-  ctx.strokeStyle = 'rgba(199, 63, 58, 0.25)';
-  ctx.lineWidth = 2 * dpr;
-  ctx.beginPath();
-
   const denom = Math.max(rows.length - 1, 1);
-  chartPoints = rows.map((row, index) => {
-    const value = row[metric.key];
-    const x = padding.left + (plotWidth / denom) * index;
-    const y = padding.top + plotHeight - (value / yMax) * plotHeight;
-    if (index === 0) {
-      ctx.moveTo(x, y);
-    } else {
-      ctx.lineTo(x, y);
-    }
-    return { x, y, row };
-  });
-
-  ctx.stroke();
-
-  ctx.fillStyle = 'rgba(199, 63, 58, 0.8)';
-  chartPoints.forEach((point) => {
+  if (state.chartType === 'bar') {
+    const slot = plotWidth / rows.length;
+    const barWidth = Math.max(slot * 0.6, 6 * dpr);
+    ctx.fillStyle = 'rgba(199, 63, 58, 0.65)';
+    chartPoints = rows.map((row, index) => {
+      const value = row[metric.key];
+      const x = padding.left + slot * index + (slot - barWidth) / 2;
+      const y = padding.top + plotHeight - (value / yMax) * plotHeight;
+      const barHeight = padding.top + plotHeight - y;
+      ctx.fillRect(x, y, barWidth, barHeight);
+      return { x: x + barWidth / 2, y, row };
+    });
+  } else {
+    ctx.strokeStyle = 'rgba(199, 63, 58, 0.25)';
+    ctx.lineWidth = 2 * dpr;
     ctx.beginPath();
-    ctx.arc(point.x, point.y, 3.5 * dpr, 0, Math.PI * 2);
-    ctx.fill();
-  });
+    chartPoints = rows.map((row, index) => {
+      const value = row[metric.key];
+      const x = padding.left + (plotWidth / denom) * index;
+      const y = padding.top + plotHeight - (value / yMax) * plotHeight;
+      if (index === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+      return { x, y, row };
+    });
+
+    ctx.stroke();
+
+    ctx.fillStyle = 'rgba(199, 63, 58, 0.8)';
+    chartPoints.forEach((point) => {
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, 3.5 * dpr, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
 
   ctx.fillStyle = '#6f4b4a';
   ctx.font = `${11 * dpr}px Manrope`;
@@ -342,6 +371,22 @@ function renderCards() {
   });
 }
 
+function renderCreationList() {
+  creationList.innerHTML = '';
+  assistants.forEach((assistant) => {
+    const item = document.createElement('div');
+    item.className = 'creation-item';
+    item.innerHTML = `
+      <strong>${assistant.name}</strong>
+      <label>
+        Дата создания
+        <input type="date" data-creation="${assistant.id}" value="${assistant.creationDate}" min="${DATA.range.start}" max="${DATA.range.end}" />
+      </label>
+    `;
+    creationList.appendChild(item);
+  });
+}
+
 
 function renderMetricList() {
   metricList.innerHTML = '';
@@ -374,10 +419,11 @@ function openModal(assistantId) {
   modalBackdrop.setAttribute('aria-hidden', 'false');
 
   const rows = state.assistant.rows;
+  const maxInputDate = state.currentDate < rows[rows.length - 1].date ? state.currentDate : rows[rows.length - 1].date;
   customStart.min = rows[0].date;
-  customStart.max = rows[rows.length - 1].date;
+  customStart.max = maxInputDate;
   customEnd.min = rows[0].date;
-  customEnd.max = rows[rows.length - 1].date;
+  customEnd.max = maxInputDate;
   customStart.value = '';
   customEnd.value = '';
 
@@ -494,6 +540,40 @@ metricList.addEventListener('click', (event) => {
   updateChart();
 });
 
+currentDateInput.addEventListener('change', () => {
+  if (!currentDateInput.value) {
+    return;
+  }
+  state.currentDate = currentDateInput.value;
+  rangeEnd.textContent = formatDM(parseDate(state.currentDate));
+  const rows = state.assistant.rows;
+  const maxInputDate = state.currentDate < rows[rows.length - 1].date ? state.currentDate : rows[rows.length - 1].date;
+  customStart.max = maxInputDate;
+  customEnd.max = maxInputDate;
+  updateAvailability();
+  if (modalBackdrop.classList.contains('active') && isStatsAvailable()) {
+    updateChart();
+  }
+});
+
+creationList.addEventListener('change', (event) => {
+  const input = event.target.closest('input[data-creation]');
+  if (!input) {
+    return;
+  }
+  const assistant = assistants.find((item) => item.id === input.dataset.creation);
+  if (!assistant) {
+    return;
+  }
+  assistant.creationDate = input.value;
+  if (state.assistant.id === assistant.id) {
+    updateAvailability();
+    if (modalBackdrop.classList.contains('active') && isStatsAvailable()) {
+      updateChart();
+    }
+  }
+});
+
 customStart.addEventListener('change', setCustomRange);
 customEnd.addEventListener('change', setCustomRange);
 
@@ -520,18 +600,30 @@ document.querySelectorAll('.pill').forEach((pill) => {
 
 downloadBtn.addEventListener('click', downloadCsv);
 
+chartToggle.addEventListener('click', (event) => {
+  const button = event.target.closest('.toggle-btn');
+  if (!button) {
+    return;
+  }
+  state.chartType = button.dataset.chart;
+  chartToggle.querySelectorAll('.toggle-btn').forEach((item) => {
+    item.classList.toggle('active', item.dataset.chart === state.chartType);
+  });
+  updateChart();
+});
+
 function isStatsAvailable() {
-  const publishedAt = parseDate(state.assistant.publishedAt);
-  const availableAt = new Date(publishedAt);
+  const creationDate = parseDate(state.assistant.creationDate);
+  const availableAt = new Date(creationDate);
   availableAt.setUTCDate(availableAt.getUTCDate() + 7);
-  const now = parseDate(DATA.range.end);
+  const now = parseDate(state.currentDate);
   return now >= availableAt;
 }
 
 function updateAvailability() {
   const available = isStatsAvailable();
-  const publishedAt = parseDate(state.assistant.publishedAt);
-  const availableAt = new Date(publishedAt);
+  const creationDate = parseDate(state.assistant.creationDate);
+  const availableAt = new Date(creationDate);
   availableAt.setUTCDate(availableAt.getUTCDate() + 7);
 
   availabilityNote.classList.toggle('active', !available);
@@ -546,8 +638,12 @@ function updateAvailability() {
 
 function init() {
   rangeStart.textContent = formatDM(parseDate(DATA.range.start));
-  rangeEnd.textContent = formatDM(parseDate(DATA.range.end));
+  rangeEnd.textContent = formatDM(parseDate(state.currentDate));
+  currentDateInput.min = DATA.range.start;
+  currentDateInput.max = DATA.range.end;
+  currentDateInput.value = state.currentDate;
   renderCards();
+  renderCreationList();
 }
 
 init();
