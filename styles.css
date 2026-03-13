@@ -213,12 +213,12 @@ p {
 }
 
 .modal {
-  width: min(980px, 95vw);
+  width: min(900px, 94vw);
   background: #fff;
   border-radius: 26px;
   border: 1px solid var(--border);
   position: relative;
-  padding: 24px;
+  padding: 20px;
   box-shadow: var(--shadow);
 }
 
@@ -368,7 +368,7 @@ p {
   border-radius: 18px;
   border: 1px solid var(--border);
   padding: 16px;
-  min-height: 420px;
+  min-height: 360px;
 }
 
 .chart-header {
@@ -453,7 +453,7 @@ p {
 
 canvas {
   width: 100%;
-  height: 360px;
+  height: 300px;
   background: #fff;
   border-radius: 16px;
   border: 1px solid var(--border);
